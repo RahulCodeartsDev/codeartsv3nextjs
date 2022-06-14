@@ -1,0 +1,67 @@
+.cs-main_reviews{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    .cs-testi_item{
+        width: 100%;
+        position: relative;
+        background-image:  url(../public/images/contact_bg.png);
+        padding: 80px 40px 40px 80px;
+        margin-top: 50px;
+        border-radius: 10px;
+        box-shadow: 19px 33px 43px 0px rgba(3, 12, 38, .1);
+        p{
+            font-size: 20px;
+            font-style: normal;
+            line-height: 30px;
+            letter-spacing: 0px;
+            color: #696687;
+        }
+        img{
+            &.quote{
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                top: -40px;
+                left: -5px;
+            }
+        }
+        .cs-profile_area{
+            margin-top: 30px;
+            img{
+                width: 74px;
+                height: 74px;
+                border-radius: 100%;
+            }
+            .cs-pro_del{
+                padding-left: 20px;
+                .name{
+                    font-weight: 700;
+                    font-size: 18px;
+                    color: #696687;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:991px){
+    .cs-main_reviews{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+}
+
+
+@media only screen and (max-width:450px){
+    .cs-main_reviews{
+        grid-template-columns: repeat(1, 1fr);
+        .cs-testi_item{
+            padding: 40px;
+            p{
+                font-size: 16px;
+            }
+        }
+    }
+}

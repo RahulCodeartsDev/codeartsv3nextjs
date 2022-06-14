@@ -1,0 +1,62 @@
+.maximize_result{
+    width: 100%;
+    background-image: url(../public/images/inner_hero.webp);
+    background-size: cover;
+    .cs-head{
+        .cs-custom_heading{
+            width: 50%;
+            padding-right: 25px;
+            h2{
+                color: var(--white-color)
+            }
+            p{
+                color: var(--white-color);
+                font-size: 18px;
+                margin-top: 25px;
+            }
+        }
+    }
+    .cs-skills_area{
+        width: 50%;
+        padding-left: 25px;
+        li{
+            font-size: 18px;
+            color: var(--white-color);
+            margin-bottom: 20px;
+            h4{
+                font-weight: 400;
+                color: var(--white-color);
+            }
+            .cs-skill_bar{
+                width: 100%;
+                background-color: var(--white-color);
+                border-radius: 10px;
+                overflow: hidden;
+                display: block;
+                margin-top: 10px;
+                .cs-score{
+                    height: 8px;
+                    background-color: #000;
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .maximize_result{
+        .cs-head{
+            flex-wrap: wrap;
+            .cs-custom_heading{
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            .cs-skills_area{
+                width: 100%;
+                padding-left: 0;
+            }
+        }
+    }
+}

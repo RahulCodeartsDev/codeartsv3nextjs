@@ -1,0 +1,131 @@
+
+.top_dres{
+    width: 50%;
+}
+.cs-contact_main_section{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    
+    .cs-left_content_area{
+        width: 100%;
+        .cs-company_details{
+            margin-top: 30px;
+        }
+    }
+    .cs-contact_form_section{
+        width: 100%;
+        .main_form_back{
+            width: 100%;
+            background-image:  url(../public/images/contact_bg.png);
+            border-radius: 10px;
+            box-shadow: 19px 33px 43px 0px rgba(3, 12, 38, .19);
+            padding: 40px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            margin-top: 40px;
+            > div{
+                position: relative;
+            }
+            em{
+                color: red;
+                font-size: 12px;
+                position: absolute;
+                bottom: -24px;
+                left: 0;
+                width: 100%;
+            }
+            .input{
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-bottom: rgba(0,0,0,.2) 1px solid;
+                color: var(--secondary-color);
+                outline-style: none;
+                background-color: transparent;
+                &::placeholder{
+                    color: var(--secondary-color);
+                }
+            }
+            .textarea{
+                grid-column: 1/3;
+                textarea{                    
+                    &.input{
+                        
+                        height: 150px;
+                        resize: none;
+                        font-family:var(--common-font); 
+                        &::placeholder{
+                            color: var(--secondary-color);
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+        .submit{
+            position: relative;
+            overflow: hidden;
+            width: 160px;
+            height: 60px;
+            border: var(--common-color2) 2px solid;
+            background-color: transparent;
+            border-radius: 51px;
+            text-transform: uppercase;
+            transition: all .5s ease-in-out;
+            font-weight: 700;
+            font-size: 12px;
+            border-color: #DCE2F7;
+            color: var(--common-color2);
+            cursor: pointer;
+            &:hover{
+                background-color: var(--secondary-color);
+                color: var(--white-color);
+            }
+        }
+    }
+    
+}
+
+.cs-google_map{
+    width: 100%;
+    iframe{
+        width: 100%;
+        height: 600px;
+        border: none;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 991px){
+    .cs-contact_main_section {
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .cs-custom_heading.center p{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    
+    .top_dres{
+        width: 100%;
+    }
+    .cs-contact_section{
+        .cs-custom_heading{
+            &.top{
+                h2{
+                    font-size: 19px;
+                    line-height: 27px;
+                }
+            }
+            
+        }
+    }
+    
+    
+}

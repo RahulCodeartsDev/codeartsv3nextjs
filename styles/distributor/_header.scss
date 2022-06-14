@@ -1,0 +1,255 @@
+@import "./menu";
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;    
+    padding: 20px 0;
+    z-index: 99;
+    &.active{
+        background-color: rgba(3,12,38,.9);
+        backdrop-filter: saturate(180%) blur(24px);
+    }
+    .cs-brand_logo{
+        display: block;
+        img{
+            height: 70px;
+        }
+    }
+    .cs-header_right{
+        position: relative;
+    }
+    .cs-mobile_hamburger{
+        width: 25px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+        margin:auto;
+        display: none;
+        span{
+            width: 60%;
+            height: 2px;
+            background-color: var(--white-color);                
+        }
+        &::before{
+            width: 100%;
+            height: 2px;
+            background-color: var(--white-color);
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";                
+        }
+        &::after{
+            width: 100%;
+            height: 2px;
+            background-color: var(--white-color);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";                
+        }
+    }
+    .cs-icon_back{
+        .cs-search{
+            border-right: var(--white-color) 1px solid;
+            width: 45px;
+            height: 28px;
+            img{
+                filter: grayscale(100%);
+                filter: invert(1);
+                display: block;
+            }
+        }
+        .cs-hamburger_menu{
+            width: 32px;
+            height: 22px;
+            position: relative;
+            cursor: pointer;
+            margin:0 23px 0 18px;
+            span{
+                width: 60%;
+                height: 2px;
+                background-color: var(--white-color); 
+                transition: all .5s ease-in-out;               
+            }
+            &::before{
+                width: 100%;
+                height: 2px;
+                background-color: var(--white-color);
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: "";                
+            }
+            &::after{
+                width: 100%;
+                height: 2px;
+                background-color: var(--white-color);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                content: "";                
+            }
+            &:hover{
+                span{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .cs-menu{       
+        li{
+            margin-right: 30px;
+            position: relative;
+            padding: 22px 0;            
+            a{
+                color: var(--white-color);
+                font-size: 16px;
+                font-weight: 400;
+                text-transform: capitalize;
+                transition: all .5s ease-in;
+                i{
+                    font-size: 10px;
+                    margin-left: 5px;
+                }
+                
+            }
+            &.active{
+                a{
+                    color: var(--primary-color);
+                }
+            }
+            &:hover{
+                a{
+                    color: var(--primary-color);
+                }
+                .cs-sub_menu{
+                    opacity: 1;
+                    visibility: visible;
+                    top: 100%;
+                }
+            }
+            .cs-sub_menu{
+                position: absolute;
+                top:calc(100% + 20px);
+                left: 0;
+                width: 264px;
+                
+                visibility: hidden;
+                transition: all .2s ease-in-out;
+                opacity: 0;
+                
+                li{
+                    margin-right: 0;
+                    margin-bottom: 0;                    
+                    background-color: var(--white-color);
+                    padding: 5px 0 5px 20px;
+                    position: relative;
+                    &:first-child{
+                        margin-bottom: 0;
+                        border-radius: 10px 10px 0 0;
+                        padding-top: 12px;
+                        &::before{
+                            width: 16px;
+                            height: 16px;
+                            background-color: var(--white-color);
+                            position: absolute;
+                            top: -19px;
+                            left: 13px;
+                            border-radius: 2px;
+                            transform: rotate(-45deg) translateY(1rem);
+                            content: "";
+                        }
+                    }
+                    &:last-child{
+                        margin-bottom: 0;
+                        border-radius: 0 0 10px 10px;
+                        padding-bottom: 12px;
+                    }
+                    a{
+                        color: var(--secondary-color);
+                        font-size: 14px;
+                        &:hover{
+                            color: var(--primary-color);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1365px){
+    header{
+        .cs-menu{
+            li{
+                margin-right: 20px;
+                a{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width:1279px){
+    header {
+        .cs-brand_logo {
+            img{
+                height: 40px;
+            }
+        }
+        .cs-menu{
+            li{
+                margin-right: 13px;
+                a{
+                    font-size: 12px;
+                }
+            }
+        }
+        .cs-icon_back {
+            .cs-hamburger_menu{
+                width: 25px;
+                margin: 0 12px 0 13px;
+                height: 20px;
+            }
+            .cs-search{
+                width: 38px;
+                img{
+                    height: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:889px){
+    header{
+        .cs-mobile_hamburger{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .cs-header_right{
+            padding-right: 38px;
+        }
+        .cs-icon_back {
+            .cs-hamburger_menu{
+                display: none;
+            }
+            .cs-search{
+                border-right: none;
+            }
+        }
+        .cs-button{
+            display: none;
+        }
+        .cs-menu{
+            display: none;
+        }
+    }
+    
+}

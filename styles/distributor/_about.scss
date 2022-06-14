@@ -1,0 +1,241 @@
+.cs-about_section{
+    width: 100%;
+    .cs-button {
+        margin-top: 30px;
+        &.small{
+            a{
+                border-color: #DCE2F7;
+                color: var(--common-color2);
+                &:hover{
+                    color: var(--white-color);
+                }
+            }
+        }
+        
+    }
+    .cs-content_area{
+        width: 50%;
+        padding-right: 30px;
+        p{            
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .cs-list{
+            width: 100%;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            li{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 18px;
+                color: var(--secondary-color);
+                padding-left: 34px;
+                position: relative;
+                width: 50%;
+                margin: 15px 0;
+                &::before{
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../public/images/checked.png);
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    background-size: cover;
+                }
+            }            
+        }
+    }
+    .cs-right_section{
+        width: 50%;
+        padding-left: 181px;
+        position: relative;
+        img{
+            width: 100%;
+            border-radius: 5px;
+        }
+        .cs-business_label{
+            width: 223px;
+            height: 225px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -38px;
+            left: 45px;
+            padding: 40px 20px 20px 30px;
+            background-color: var(--white-color);
+            z-index: 1;
+            box-shadow: 19px 33px 43px 0px rgba(3, 12, 38, .19);
+            h4{
+                font-size: 20px;
+            }
+            lord-icon{
+                width: 144px;
+                height: 148px;
+                left: -20px;
+                position: relative;
+            }
+           
+        }
+    }
+    &.cs-seo_company{
+        background-color: #f7f7f7;
+        .cs-content_area{
+            padding-left: 30px;
+            padding-right: 0;
+        }
+        .cs-right_section{
+            padding-right: 181px;
+            padding-left: 0;
+            .cs-business_label{
+                right: 45px;
+                left: auto;
+            }
+        }
+        .seo_list_back{
+            width: 100%;
+            li{
+                margin-bottom: 30px;
+                lord-icon{
+                    width: 150px;
+                    height: 120px;
+                    margin-right: 20px;
+                    background-color: var(--white-color);
+                    box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .3);
+                    border-radius: 5px;
+                    padding: 10px;
+                    position: relative;
+                    overflow: visible;
+                    &::before{
+                        width: 16px;
+                        height: 16px;
+                        background-color: var(--white-color);
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        margin: auto;
+                        right: -5px;
+                        border-radius: 2px;
+                        transform: rotate(-45deg);
+                        content: "";
+                    }
+                }
+                h3{
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+                p{
+                    margin: 0 !important;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1279px){
+    .cs-about_section{
+        .cs-container{
+            flex-wrap: wrap;
+        }
+        .cs-content_area{
+            width: 100%;            
+            order: 2;
+        }
+        .cs-right_section{
+            width: 100%;
+            margin-bottom: 120px;
+        }
+    }
+}
+
+@media only screen and (max-width:450px){
+    .cs-about_section{
+        text-align: center;
+        .cs-content_area{
+            padding-right: 0;
+            p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .cs-list{
+                li{
+                    font-size: 11px;
+                    padding-left: 28px;
+                    text-align: left;
+                }
+            }
+        }
+        .cs-right_section{
+            padding-left: 89px;
+            .cs-business_label{
+                width: 180px;
+                height: 175px;
+                h4{
+                    font-size: 16px;
+                }
+                lord-icon{
+                    width: 80px;
+                    height: 80px;
+                    left: -11px;
+                }
+            }
+        }
+        &.cs-seo_company{
+            .cs-content_area{
+                padding-left: 0;
+                .seo_list_back{
+                    li{
+                        flex-direction: column;
+                        text-align: center;
+                        margin-bottom: 50px;
+                        lord-icon{
+                            margin-bottom: 30px;
+                            margin-right: 0;
+                            &::before{
+                                top: auto;
+                                bottom: -7px;
+                                left: 0;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .cs-right_section{
+                padding-left: 0;
+                padding-right: 89px;
+                .cs-business_label{
+                    h4{
+                        font-size: 16px;
+                    }
+                    lord-icon{
+                        left: -21px;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+@media only screen and (max-width:350px){
+    .cs-about_section{
+        .cs-content_area{
+            
+            .cs-list{
+                li{
+                    font-size: 10px;
+                    padding-left: 20px;
+                    &::before{
+                        width: 16px;
+                        height: 16px;
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+

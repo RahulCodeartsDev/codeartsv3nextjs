@@ -1,0 +1,176 @@
+footer{
+    width: 100%;
+    background-color: var(--secondary-color);
+    .cs-top{
+        border-bottom: rgba(255,255,255,.1) 1px solid;
+        h2{
+            width: 50%;
+            padding-right: 25px;
+            color: var(--white-color);
+            font-size: 30px;
+            line-height: 42px;
+            font-weight: 700;
+        }
+        .cs-contact_details{
+            width: 50%;
+            li{
+                width: 50%;
+                lord-icon{
+                    width: 100px;
+                    height: 100px;
+                }
+                color: var(--white-color);
+                font-size: 20px;
+                line-height: 32px;
+                span{
+                    font-size: 16px;
+                    color: rgba(255,255,255,.7);
+                }
+            }
+        }
+    }
+    .cs-bottom{
+        width: 100%;        
+        .cs-footer_items{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 30px;
+            .cs-footer_item{
+                width: 100%;
+                position: relative;
+                &::before{
+                    width: 1px;
+                    height: 100px;
+                    background-color: rgba(255,255,255,.1);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    content: "";
+                    margin: auto;
+                }
+                &:last-child{
+                    &::before{
+                        display: none;
+                    }
+                }
+                h3{
+                    color: var(--white-color);
+                    margin-bottom: 20px;
+                }
+                p{
+                    margin-bottom: 20px;
+                    padding-right: 30px;
+                }
+                .cs-social{
+                    width: 100%;
+                    li{
+                        margin-right: 10px;
+                        a{
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 100%;
+                            background-color: var(--common-color2);
+                            transition: all .5s ease-in-out;
+                            text-transform: capitalize;
+                            &:hover{
+                                background-color: var(--primary-color);
+                            }
+                        }
+                    }
+                }
+                .cs-ft_menu{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    li{
+                        margin-bottom: 12px;
+                        a{
+                            color: var(--common-color);
+                            font-weight: 600;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .cs-copyright{
+        width: 100%;
+        background-color: #061534;
+        padding: 15px 0;
+        color: var(--white-color);
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:1279px){
+    footer{
+        .cs-top{
+            h2{
+                font-size: 25px;
+                line-height: 35px;
+            }
+            .cs-contact_details{
+                flex-wrap: wrap;
+                li{
+                    width: 100%;
+                }
+            }
+        }
+        .cs-bottom {
+            .cs-footer_items {
+                .cs-footer_item{
+                    grid-column: 1/4;
+                    border-bottom: rgba(255,255,255,.1) 1px solid;
+                    padding-bottom: 30px;
+                    &::before{
+                        display: none;
+                    }
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    footer{
+        .cs-top{
+            padding: 50px 0;
+            .cs-container{
+                flex-wrap: wrap;
+            }
+            h2{
+                font-size: 25px;
+                line-height: 35px;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+            .cs-contact_details{
+                flex-wrap: wrap;
+                width: 100%;
+                li{
+                    width: 100%;
+                    lord-icon{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+        .cs-bottom {
+            padding: 50px 0;
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    footer {
+        .cs-copyright{
+            font-size: 12px;
+        }
+    }
+}

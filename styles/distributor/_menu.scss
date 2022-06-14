@@ -1,0 +1,152 @@
+.cs-mobile_menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../public/images/hero_bg.jpg);
+    background-size: cover;
+    z-index: 999;
+    padding: 20px 15px;
+    transform: translate3d(100%, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    &.cs-mobile_menu_open{
+        transform: translate3d(0%, 0, 0);
+    }
+    .cross{
+        position: relative;
+        cursor: pointer;
+        img{
+            filter: grayscale(100%);
+            filter: invert(1);
+        }
+    }
+    .cs-menu{
+        width: 100%;
+        flex-direction: column;
+        display: flex !important;
+        padding-top: 50px;
+        li{
+            padding: 0;
+            margin-bottom: 10px;
+            a{
+                font-size: 18px;
+                position: relative;
+                span{
+                    background-image: url(../public/images/plus.png);
+                    width: 16px;
+                    height: 16px;
+                    background-size: cover;
+                    position: absolute;
+                    right: -31px;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                }
+            }
+            
+            .cs-sub_menu{
+                opacity: 1;
+                visibility: visible;
+                position: relative;
+                top: 0;
+                margin: 10px 0;
+                display: none;
+            }
+            &.cs-sub_menu_open{
+                a{
+                    span{
+                        background-image: url(../public/images/remove.png);
+                    }
+                }
+                .cs-sub_menu{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.cs-company_info_right_panel{
+    width: 430px;
+    height: 100vh;
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    padding: 20px 15px;
+    transform: translate3d(-100%, 0, 0);
+    transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+    &.cs-company_info_right_panel_open{
+        transform: translate3d(0%, 0, 0);
+    }
+    .cs-brand_logo{
+        img{
+            height: 70px;
+        }
+    }
+    p{
+        margin: 20px 0;
+    }
+    
+}
+
+.cs-company_details{
+    margin-bottom: 30px;
+    h3{
+        margin-bottom: 20px;
+        font-weight: 900;
+        position: relative;
+        padding-bottom: 6px;
+        &::before{
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-color);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            content: "";
+        }
+    }
+    .cs_contact_details{
+        li{
+            margin-bottom: 15px;
+            img{
+                width: 50px;
+                height: 50px;
+                object-fit: cover;
+                margin-right: 15px;
+                border-radius: 100%;
+            }
+            p{
+                margin: 0;
+                width: 80%;
+            }
+            lottie-player{
+                width: 50px;
+                height: 50px;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+.cs-ovarlay{
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.8);
+    cursor: url(../public/images/close_cursor.png), pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .7s ease-in-out;
+    &.cs-ovarlay_open{
+        opacity: 1;
+        visibility: visible;
+    }
+}

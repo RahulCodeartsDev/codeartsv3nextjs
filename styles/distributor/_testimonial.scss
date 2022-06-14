@@ -1,0 +1,197 @@
+.cs-testimonial_section{
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 180px;
+    .cs-custom_heading{
+        width: 45%;
+        padding-right: 25px;
+        position: relative;
+        z-index: 1;
+        p{
+            margin-top: 20px;
+            width: 80%;
+        }
+        lord-icon{
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            top: -57px;
+            right: 0;
+            z-index: -1;
+        }
+    }
+    .cs-testimonial_main_area{
+        width: 50%;
+        height: 310px;
+        border-radius: 40px 40px 40px 0;
+        background-color: #f9fafb;
+        box-shadow: 13px 13px 51px 0px rgba(10,51,80,.16);
+        padding: 36px 30px 0;
+        .owl-stage-outer{
+            padding-top: 34px;
+        }
+        .owl-dots{
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 55px;
+            bottom: -75px;
+            left: 0;
+            position: absolute;
+            .owl-dot{
+                margin: 0 10px 0 0;
+               span{
+                width: 10px;
+                height: 10px;
+                background-color: var(--secondary-color) ; 
+                transition: all .5s ease-in-out;
+               }
+               &.active{
+                   span{
+                       width: 22px !important;
+                       background-color: var(--primary-color) ; 
+                   }
+               }
+            }
+        }
+        .cs-testi_item{
+            width: 100%;
+            padding-left: 80px;
+            position: relative;
+            p{
+                font-size: 20px;
+                font-style: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #696687;
+            }
+            img{
+                &.quote{
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: -40px;
+                    left: -5px;
+                }
+            }
+            .cs-profile_area{
+                margin-top: 30px;
+                img{
+                    width: 74px;
+                    height: 74px;
+                    border-radius: 100%;
+                }
+                .cs-pro_del{
+                    padding-left: 20px;
+                    .name{
+                        font-weight: 700;
+                        font-size: 18px;
+                        color: #696687;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1279px){
+    .cs-testimonial_section {
+        .cs-custom_heading {
+            lord-icon{
+                width: 300px;
+                height: 300px;
+                top: 0;
+            }
+        }
+        .cs-testimonial_main_area {
+            .cs-testi_item{
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:889px){
+    .cs-testimonial_section {
+        padding-top: 50px;
+        .cs-custom_heading {
+            lord-icon{
+                width: 300px;
+                height: 300px;
+                top: 0;
+            }
+        }
+        .cs-testimonial_main_area {
+            .cs-testi_item{
+                padding-left: 39px;
+                lord-icon{
+                    width: 50px;
+                    height: 50px;
+                    top: -23px;
+                }
+                p{
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-testimonial_section{
+        padding-top: 100px;
+        padding-bottom: 140px;
+        .cs-container{
+            flex-wrap: wrap;
+        }
+        .cs-custom_heading{
+            width: 100%;
+            margin-bottom: 50px;
+            lord-icon{
+                top: -75px;
+            }
+        }
+        .cs-testimonial_main_area{
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-width:380px){
+    .cs-testimonial_section{
+        .cs-custom_heading{
+            width: 100%;
+            margin-bottom: 50px;
+            lord-icon{
+                top: -75px;
+            }
+        }
+        .cs-testimonial_main_area{
+            width: 100%;
+            height: 373px;
+            .cs-testi_item {
+                p{
+                    font-size: 14px;
+                    line-height: 20px;
+                }
+                .cs-profile_area {
+                    img{
+                        width: 50px;
+                        height: 50px;
+                    }
+                    .cs-pro_del{
+                        .name{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

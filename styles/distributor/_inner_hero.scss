@@ -1,0 +1,81 @@
+.cs-inner_pages_hero_section{
+    width: 100%;
+    height: auto;
+    background-image: url(../public/images/inner_hero.webp);
+    text-align: center;
+    padding: 180px 0 118px 0;
+    background-size: cover;
+    position: relative;
+    &::before{
+        background-image: url(../public/images/cube.png);
+        width: 214px;
+        height: 182px;
+        content: "";
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        background-size: cover;
+        animation: cube 5s linear infinite;
+    }
+    h1{
+        color: var(--white-color);
+        font-size: 36px;
+        text-transform: uppercase;
+    }
+    ul{
+        &.breadcrumb{
+            margin-top: 25px;
+            li{
+                color: var(--primary-color);
+                margin-right: 20px;
+                &:last-child{
+                    margin-right: 0;
+                    a{
+                        padding-right: 0;
+                    }
+                }
+                a{
+                    color: var(--white-color);
+                    padding-right: 27px;
+                    position: relative;
+                    &::after{
+                        width: 6px;
+                        height: 6px;
+                        background-color: var(--primary-color);
+                        border-radius: 100%;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        margin: auto;
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:889px){
+    .cs-inner_pages_hero_section{
+        &::before{
+            width: 150px;
+            height: 131px;
+            top: 45px;
+            left: 197px;
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-inner_pages_hero_section {
+        &::before{
+            width: 100px;
+            height: 85px;
+            top: 45px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}

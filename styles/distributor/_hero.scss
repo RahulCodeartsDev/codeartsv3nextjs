@@ -1,0 +1,314 @@
+.cs-hero_section{
+    width: 100%;
+    height: 1165px;
+    background-image: url(../public/images/hero_bg.jpg);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+    &::before{
+        background-image: url(../public/images/cube.png);
+        width: 214px;
+        height: 182px;
+        content: "";
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        background-size: cover;
+        animation: cube 5s linear infinite;
+    }
+    .cs-content_area{
+        width: 49%;
+        h1{
+            font-size: 73px;
+            color: var(--white-color);
+            font-weight: 600;
+            line-height: 78px;
+            .cs-text_slide_items{
+                display: none;
+            }
+        }
+        p{
+            font-size: 18px;
+            width: 73%;
+            margin-top: 30px;
+        }
+        .cs-text_slider{
+            padding-left: 15px;
+        }
+        .cs-video_button{
+            color: var(--white-color);
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-left: 20px;
+            .cs-play{
+                width: 50px;
+                height: 50px;
+                background-color: var(--white-color);
+                border-radius: 100%;
+                margin-right: 15px;
+                cursor: pointer;
+                transition: all .5s ease-in-out;
+                img{
+                    transition: all .5s ease-in-out;
+                }
+                &:hover{
+                    background-color: var(--common-color2);
+                    img{
+                        filter: grayscale(100%);
+                        filter: invert(1);
+                    }
+                }
+            }
+        }
+    }
+    .cs-avator_area{
+        position: relative;
+        width: 710px;
+        height: 690px;
+        img{
+            position: absolute;
+            top: 0;
+            left: -28px;
+            width: 100%;
+        }
+        span{
+            width: 100px;
+            height: 100px;
+            background-color: var(--white-color);
+            border-radius: 100%;
+            position: absolute;
+            box-shadow: 19px 33px 43px 0px rgba(3, 12, 38, .19);
+            z-index: 9;
+            lord-icon{
+                width: 80px;
+                height: 80px;
+            }            
+            &.cs-connection{
+                top: 87px;
+                left: -27px;
+            }
+            &.cs-business{
+                bottom: 130px;
+                left: 89px;
+            }
+            &.cs-idea{
+                width:150px;
+                height: 175px;
+                border-radius: 10px;
+                top: 50px;
+                right: 0;
+                lord-icon{
+                    width: 80%;
+                    height: 80%;
+                } 
+            }
+        }
+    }
+    
+}
+
+
+
+@media only screen and (max-width:1365px){
+    .cs-hero_section{
+        height: 1034px;
+        .cs-content_area{
+            width: 39%;
+            h1{
+                font-size: 58px;
+                line-height: 70px;
+            }
+            p{
+                font-size: 16px;
+                width: 85%;
+            }
+        }
+        .cs-avator_area{
+            width: 575px;
+        }
+    }
+}
+
+@media only screen and (max-width:1279px){
+    .cs-hero_section{
+        height: 833px;
+        .cs-content_area{
+            width: 39%;
+            h1{
+                font-size: 45px;
+                line-height: 51px;
+            }
+            p{
+                font-size: 14px;
+                width: 100%;
+            }
+            .cs-video_button {
+                font-size: 11px;
+                .cs-play{
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;
+                    img{
+                        width: 12px;
+                    }
+                }
+            }
+            
+        }
+        .cs-avator_area{
+            width: 475px;
+            height: 619px;
+            span{
+                &.cs-connection{
+                    top: 41px;
+                }
+                &.cs-idea{
+                    width: 115px;
+                    height: 135px;
+                    top: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:889px){
+    .cs-hero_section{
+        height: 708px;
+        padding-top: 80px;
+        &::before{
+            width: 150px;
+            height: 131px;
+            top: 45px;
+            left: 197px;
+        }
+        .cs-content_area{
+            width: 46%;
+            h1{
+                font-size: 36px;
+                line-height: 42px;
+            }
+            p{
+                font-size: 14px;
+                width: 100%;
+            }
+            .cs-video_button {
+                font-size: 11px;
+                .cs-play{
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 10px;
+                    img{
+                        width: 12px;
+                    }
+                }
+            }
+            
+        }
+        .cs-avator_area{
+            width: 330px;
+            height: 474px;
+            span{
+                width: 70px;
+                height: 70px;
+                lord-icon{
+                    width: 70%;
+                }
+                &.cs-connection{
+                    top: 13px;
+                }
+                &.cs-idea{
+                    width: 85px;
+                    height: 94px;
+                    top: 30px;
+                }
+                &.cs-business{
+                    bottom: 165px;
+                    left: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-hero_section {
+        padding-top: 118px;
+        text-align: center;
+        height: 650px;
+        &::before{
+            width: 100px;
+            height: 85px;
+            top: 45px;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .cs-container{
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        .cs-content_area{
+            width: 86%;
+            text-align: center;
+            p{
+                width: 80%;
+                display: inline-block;
+            }
+            .cs-buttons_back{
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        .cs-avator_area{
+            display: none;
+        }
+    }
+}
+@media only screen and (max-width:479px){
+    .cs-hero_section {
+        height: 700px;
+    }
+}
+
+
+
+@media only screen and (max-width:380px){
+    .cs-hero_section{
+        height: 727px;
+        .cs-content_area{
+            p{
+                width: 100%;
+            }
+            .cs-buttons_back{
+                flex-wrap: wrap;
+            }
+            .cs-button{
+                width: 100%;
+                &.small{
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+            .cs-video_button{
+                margin-left: 0;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:350px){
+    .cs-hero_section{
+        .cs-content_area{
+            h1 {
+                font-size: 28px;
+                line-height: 35px;
+            }
+        }
+    }
+}
+

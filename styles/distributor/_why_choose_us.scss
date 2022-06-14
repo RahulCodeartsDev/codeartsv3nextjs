@@ -1,0 +1,382 @@
+.cs-why_choose_us_section{
+    width: 100%;
+    margin-top: -351px;
+    .cs-left_section{
+        width: 44%;
+        .cs-why_option{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 30px;
+            li{
+                width: 100%;
+                min-height: 292px;
+                background-color: var(--white-color);
+                box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .1);
+                transition: all 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+                margin: 0;
+                padding: 35px 30px 65px 39px;
+                border-radius: 10px;                
+                lord-icon{
+                    width: 96px;
+                    height: 96px;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 700;
+                    margin: 20px 0 10px;
+                    a{
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &:hover{
+                    background-color: #f7f7f7; 
+                    transform: scale(1.1);
+                    box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .2);
+                    h3{
+                        a{
+                            color: var(--primary-color);
+                        }
+                    }                  
+                }
+            
+            }
+        }
+    }
+    .cs-right_section{
+        width: 48%;
+        position: relative;
+        &::before{
+            background-image: url(../public/images/cube2.png);
+            width: 214px;
+            height: 182px;
+            content: "";
+            position: absolute;
+            top: -100px;
+            right: -50px;
+            background-size: cover;
+            animation: cube 5s linear infinite;
+        }        
+        p{
+            
+            margin-top: 10px;
+        }
+        .cs-list{
+            width: 100%;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            li{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 18px;
+                color: var(--secondary-color);
+                padding-left: 34px;
+                position: relative;
+                width: 50%;
+                margin: 15px 0;
+                &::before{
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../public/images/checked.png);
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    margin: auto;
+                    background-size: cover;
+                }
+            }            
+        }
+        .cs-button {
+            margin-top: 30px;
+            &.small{
+                a{
+                    border-color: #DCE2F7;
+                    color: var(--common-color2);
+                    &:hover{
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+    }
+
+    &.inner{
+        width: 100%;
+        margin: -38px 0 0 0;
+        position: relative;
+        .cs-why_option{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 30px;
+            li{
+                width: 100%;
+                min-height: 292px;
+                background-color: var(--white-color);
+                box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .1);
+                transition: all 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+                margin: 0;
+                padding: 35px 30px 65px 39px;
+                border-radius: 10px;                
+                lord-icon{
+                    width: 96px;
+                    height: 96px;
+                }
+                h3{
+                    font-size: 24px;
+                    line-height: 30px;
+                    font-weight: 700;
+                    margin: 20px 0 10px;
+                    a{
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+                &:hover{
+                    background-color: #f7f7f7; 
+                    box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .2);
+                    h3{
+                        a{
+                            color: var(--primary-color);
+                        }
+                    }                  
+                }
+            
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:1500px){
+    .cs-why_choose_us_section{
+        .cs-right_section{
+            &::before{
+                right: 50px;
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:1365px){
+    .cs-why_choose_us_section {
+        margin-top: -300px;
+        .cs-left_section {
+            width: 48%;
+        }
+    }
+}
+
+@media only screen and (max-width:1279px){
+    .cs-why_choose_us_section {
+        margin-top: -195px;
+        .cs-left_section {
+            width: 48%;
+            .cs-why_option{
+                li{
+                    padding: 18px 20px 0 25px;  
+                    min-height: 266px;                  
+                    lord-icon {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    h3{
+                        font-size: 17px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+                    
+            }                
+        }
+        .cs-right_section{            
+            p{
+                font-size: 14px;
+                line-height: 24px;
+            }
+            .cs-list{
+                li{
+                    font-size: 13px;
+                    &:before{
+                        width: 20px;
+                        height: 20px;
+
+                    }
+                }
+            }
+        }
+        &.inner{
+            .cs-why_option{                
+                li{
+                    padding: 18px 20px 0 25px;  
+                    min-height: 237px;                  
+                    lord-icon {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    h3{
+                        font-size: 17px;
+                    }
+                    p{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+                    
+            }   
+        }
+     }
+}
+
+
+@media only screen and (max-width:889px){
+    .cs-why_choose_us_section {
+        margin-top: -178px;
+        .cs-container{
+            flex-wrap: wrap;
+        }
+        .cs-left_section {
+            width: 100%;
+            margin-bottom: 50px;
+            .cs-why_option{
+                li{
+                    min-height: 234px;
+                    &:hover{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+        .cs-right_section{
+            width: 100%;
+            &::before{
+                width: 150px;
+                height: 131px;
+                top: 0;
+                right: 50px;
+            }
+        }
+        &.inner{
+            .cs-why_option{
+                grid-template-columns: repeat(2, 1fr);
+                li{
+                    min-height: 234px;
+                    &:hover{
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-why_choose_us_section {
+        margin-top: -198px;
+        .cs-right_section{
+            &::before{
+                width: 100px;
+                height: 85px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:479px){
+    .cs-why_choose_us_section {
+        margin-top: -183px;
+        .cs-left_section{
+            .cs-why_option{
+                grid-gap: 15px;
+                li{
+                    padding: 18px 16px 0 18px;
+                    min-height: 217px;
+                    lord-icon{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    h3{
+                        font-size: 15px;
+                        margin: 10px 0 3px;
+                    }
+                    p{
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+        .cs-right_section{
+            
+            p{
+                font-size: 13px;
+            }
+            .cs-list{
+                li{
+                    font-size: 11px;
+                    padding-left: 28px;
+                }
+            }
+        }
+        &.inner{
+            .cs-why_option{
+                grid-gap: 15px;
+                li{
+                    padding: 18px 16px 0 18px;
+                    min-height: 192px;
+                    lord-icon{
+                        width: 60px;
+                        height: 60px;
+                    }
+                    h3{
+                        font-size: 15px;
+                        margin: 10px 0 3px;
+                    }
+                    p{
+                        font-size: 13px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:350px){
+    .cs-why_choose_us_section{
+        .cs-left_section {
+            .cs-why_option{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+        .cs-right_section {
+            .cs-list{
+                li{
+                    font-size: 10px;
+                    padding-left: 20px;
+                    &::before{
+                        width: 16px;
+                        height: 16px;
+
+                    }
+                }
+            }
+        }
+        &.inner{
+            .cs-why_option{
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+}
+
+
+
+
+    
+   

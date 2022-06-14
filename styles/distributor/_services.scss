@@ -1,0 +1,231 @@
+.cs-services_section{
+    width: 100%;
+    position: relative;
+    &::before{
+        background-image: url(../public/images/cube2.png);
+        width: 214px;
+        height: 182px;
+        content: "";
+        position: absolute;
+        top: 120px;
+        left: 50px;
+        background-size: cover;
+        animation: cube 5s linear infinite;
+    }  
+    .cs-main_section{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        position: relative;
+        &::before{
+            background-image: url(../public/images/s_bg.png);
+            width: 832px;
+            height: 690px;
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: -1;
+            background-size: cover;
+            animation: cube 5s linear infinite;
+        }
+        .cs-portion{
+            width: 100%;
+            min-height: 237px;
+            background-color: var(--white-color);
+            box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .1);
+            transition: all 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+            margin: 0;
+            padding: 35px 30px 35px 39px;
+            border-radius: 10px;  
+            .cs-heading{ 
+                margin-bottom: 20px; 
+                .cs-image_area{
+                    position: relative;
+                    height: 71px;
+                    padding-left: 90px;                    
+                    img{
+                        width: 76px;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        transition: all .5s ease-in-out;
+                        &.hover{
+                            opacity: 0;
+                            visibility: hidden;
+                        }
+                    }
+                }
+                h3{
+                    padding-top: 12px;
+                    font-size: 22px;
+                    font-weight: 500;
+                    transition: all .5s ease-in-out;
+                    text-transform: capitalize;
+                }                
+                
+            }  
+            p{
+                width: 100%;
+                padding: 0 0 0 10px;
+                transition: all .5s ease-in-out;
+            } 
+            &:hover{
+                background-color: var(--ternary-color);
+                 transform: scale(1.1);
+                box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .3);
+                .cs-heading{ 
+                    .cs-image_area{
+                        img{
+                            opacity: 0;
+                            visibility: hidden;
+                            &.hover{
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                    h3{
+                        color: var(--white-color);
+                    }
+                }
+                p{
+                    color: var(--white-color);
+                }
+                
+            } 
+        }
+    }
+}
+
+@media only screen and (max-width:1500px){
+    .cs-services_section{
+        .cs-main_section{
+            &::before{
+                width: 500px;
+                height: 350px;
+                right: 154px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:1279px){
+    .cs-services_section{
+        .cs-main_section{
+            grid-template-columns: repeat(2, 1fr);
+            &::before{
+                width: 300px;
+                height: 150px;
+                left: 0;
+                margin: auto;
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width:889px){
+    .cs-services_section{
+        &::before{
+            width: 150px;
+            height: 131px;
+            top: 45px;
+            left: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-services_section{
+        .cs-main_section{
+            grid-template-columns: repeat(1, 1fr);
+            .cs-portion {
+                min-height: 1px;
+                &:hover{
+                    transform: scale(1);
+                }
+            }
+        }
+        &::before{
+            width: 100px;
+            height: 85px;
+        }
+    }
+}
+
+@media only screen and (max-width:380px){
+    .cs-services_section{
+        .cs-main_section{
+            &::before{
+                width: 200px;
+                height: 80px;
+            }
+            .cs-portion {
+                padding: 20px;
+                .cs-heading{
+                    h3{
+                        font-size: 18px;
+                    }
+                    .cs-image_area{
+                        padding-left: 76px;
+                        height: 53px;
+                        img{
+                            width: 60px;
+                        }
+                    }
+                }
+                p{
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+   
+}
+
+
+
+.cs-service_details_section{
+    width: 100%;
+    .cs-service_main{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 50px;
+        .cs-service_item{
+            width: 100%;
+            lord-icon{
+                width: 120px;
+                height: 120px;
+                margin-bottom: 30px;
+            }
+            h3{
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+            p{
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1279px){
+    .cs-service_details_section{
+        .cs-service_main{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width: 669px){
+    .cs-service_details_section{
+        text-align: center;
+        .cs-service_main{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+}

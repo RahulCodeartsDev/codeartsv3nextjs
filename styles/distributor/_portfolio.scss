@@ -1,0 +1,321 @@
+.cs-portfolio_section{
+    width: 100%;
+    background-image: url(../public/images/port_bg.png);
+    .cs-portfolio_main_area{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        
+        .cs-portfolio_item{
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            &.active{
+                .cs-portfolioDetailsArea{
+                    display: block;
+                }
+            }
+            picture{
+                width: 100%;
+                display: block;
+                box-shadow: 0 4px 4px rgba(23,22,26,.1);
+                img{
+                    width: 100%;
+                    border-radius: 5px;
+                    display: block;
+                }
+                margin-bottom: 30px;
+            }
+            h3{
+                font-size: 18px;
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+            p{
+                
+                font-size: 14px;
+            }
+            
+        }
+    }
+    .cs-portfolio_filter_section{
+        width: 100%;
+        margin-top: 50px;
+        .cs-filter_nav{
+            margin-left: 30px;
+            li{
+                margin-right: 20px;
+                &.active{
+                    a{
+                        color: var(--primary-color);
+                    }
+                }
+                a{
+                    font-weight: 700;
+                    position: relative;
+                    transition: all .5s ease-in-out;
+                    &:hover{
+                        color: var(--primary-color);
+                    }
+                   
+                    &:after{
+                        content: "/";
+                        padding-left: 20px;
+                    }
+                }
+                &:last-child{
+                    margin-right: 0;
+                    a{
+                        &::after{
+                            padding-left: 0;
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:889px){
+    .cs-portfolio_section{
+        .cs-portfolio_main_area{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-portfolio_section{
+        .cs-portfolio_main_area{
+            .cs-portfolio_item {
+                h3{
+                    font-size: 15px;
+                }
+            }
+        }
+        .cs-portfolio_filter_section {
+            flex-wrap: wrap;
+            flex-direction: column;
+            text-align: left;
+            .cs-filter_nav{
+                justify-content: center;
+                li{
+                    a{
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:450px){
+    .cs-portfolio_section{
+        .cs-portfolio_main_area{
+            grid-template-columns: repeat(1, 1fr);
+            .cs-portfolio_item {
+                h3{
+                    font-size: 15px;
+                }
+            }
+        }
+        .cs-portfolio_filter_section {
+            .cs-filter_nav{
+                justify-content: center;
+                margin-left: 0;
+                li{
+                    margin-right: 10px;
+                    a{
+                        font-size: 11px;
+                        &:after{
+                            padding-left: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:380px){
+    .cs-portfolio_section{
+        .cs-portfolio_filter_section {
+            .cs-filter_nav{
+                li{
+                    
+                    a{
+                        font-size: 9px;
+                       
+                    }
+                }
+            }
+        }
+    }
+}
+
+.cs-portfolio_details_section{
+    width: 100%;
+    .cs-portfolio_content_area{
+        width: 60%;
+        padding-right: 50px;
+        .cs-cat{
+            margin-bottom: 10px;
+        }
+        h3{
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        h4{
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+        .cs-option{
+            width: 100%;
+            .port{
+                width: 50%;
+                margin-top: 40px;
+                
+            }
+        }
+        .cs-button {
+            margin-top: 30px;
+            &.small{
+                a{
+                    border-color: #DCE2F7;
+                    color: var(--common-color2);
+                    &:hover{
+                        color: var(--white-color);
+                    }
+                }
+            }
+        }
+        .cs-review_item{
+            width: 100%;
+            position: relative;
+            background-image:  url(../public/images/contact_bg.png);
+            padding: 80px 40px 40px 80px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 19px 33px 43px 0px rgba(3, 12, 38, .1);
+            p{
+                font-size: 16px;
+                font-style: normal;
+                line-height: 30px;
+                letter-spacing: 0px;
+                color: #696687;
+            }
+            lord-icon{
+                width: 80px;
+                height: 80px;
+                position: absolute;
+                top: -40px;
+                left: -5px;
+            }
+            .cs-profile_area{
+                margin-top: 30px;
+                img{
+                    width: 74px;
+                    height: 74px;
+                    border-radius: 100%;
+                }
+                .cs-pro_del{
+                    padding-left: 20px;
+                    .name{
+                        font-weight: 700;
+                        font-size: 18px;
+                        color: #696687;
+                    }
+                }
+            }
+        }
+    }
+    .cs-portfolio_view_area{
+        width: 40%;
+        height: 892px;
+        overflow: auto;
+        padding: 40px;
+        background-color: var(--white-color);
+        box-shadow: 0px 0px 62px 0px rgba(10, 51, 80, .3);
+        border-radius: 10px;
+        img{
+            width: 100%;
+        }
+        &::-webkit-scrollbar {
+            width: 2px;
+          }
+           
+        &::-webkit-scrollbar-track {
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 0;
+          }
+           
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--primary-color);
+            border-radius: 50px;
+          }
+    }
+}
+
+@media only screen and (max-width:889px){
+    .cs-portfolio_details_section{
+        .cs-container{
+            flex-wrap: wrap;
+        }
+        .cs-portfolio_content_area{
+            padding-right: 0;
+            width: 100%;
+            order: 2;
+        }
+        .cs-portfolio_view_area{
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:669px){
+    .cs-portfolio_details_section{
+        .cs-container{
+            flex-wrap: wrap;
+        }
+        .cs-portfolio_content_area{
+            width: 100%;
+            order: 2;
+            .cs-option{
+                flex-wrap: wrap;
+                .port{
+                    width: 100%;
+                }
+            }
+        }
+        .cs-portfolio_view_area{
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media only screen and (max-width:450px){
+    .cs-portfolio_details_section {
+        &.pt{
+            padding-top: 50px;
+        }
+        .cs-portfolio_content_area {
+            h3{
+                font-size: 26px;
+            }
+            h4{
+                font-size: 20px;
+            }
+            .cs-review_item{
+                padding: 60px 20px 30px 22px;
+            }
+        }
+    }
+}
